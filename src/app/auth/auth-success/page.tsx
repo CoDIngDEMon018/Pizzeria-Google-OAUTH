@@ -1,5 +1,5 @@
 import { RxCheckCircled } from "react-icons/rx";
-
+import Link from 'next/link';
 const AuthSuccessPage: React.FC = () => {
   return (
     <div className="auth-success-page">
@@ -15,12 +15,12 @@ const AuthSuccessPage: React.FC = () => {
               "Want to go back to the sign-in page and try again? "
             }
 
-            <a
+            <Link
               href="/api/auth/signin"
               style={{ cursor: "pointer", textDecoration: "underline" }}
             >
               Click Here
-            </a>
+            </Link>
           </p>
         </div>
       </div>

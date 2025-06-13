@@ -202,8 +202,8 @@ export const DashboardPage: React.FC = () => {
     setSortDirection(newDirection);
 
     const sortedOrders = [...orders].sort((a, b) => {
-      let aVal = field === "id" ? a.id : a.orderDate;
-      let bVal = field === "id" ? b.id : b.orderDate;
+      const aVal = field === "id" ? a.id : a.orderDate;
+      const bVal = field === "id" ? b.id : b.orderDate;
       
       if (newDirection === "asc") {
         return aVal.localeCompare(bVal);
@@ -231,9 +231,11 @@ export const DashboardPage: React.FC = () => {
           <input
             className="field-input"
             type="text"
+            aria-label="Username"
             value={username}
             onChange={(event) => setUserName(event.target.value)}
           />
+
           <button
             className="update-field-button"
             onClick={() => update({ name: username })}
