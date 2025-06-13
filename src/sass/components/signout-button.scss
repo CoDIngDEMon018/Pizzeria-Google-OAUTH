@@ -1,0 +1,12 @@
+.signout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#f44336, 10%);
+  }
+}
